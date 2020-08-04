@@ -13,14 +13,17 @@ config = Config(
 
 vrt = VisualRegressionTracker(config)
 
-driver.get("http://www.python.org")
-vrt.track(TestRun(
-    name='Image name',
-    imageBase64=driver.get_screenshot_as_base64(),
-    diffTollerancePercent=0,
-    os='Mac',
-    browser='Chrome',
-    viewport='800x600',
-    device='PC',
-))
-driver.quit()
+try:
+    driver.get("http://www.python.org")
+    vrt.track(TestRun(
+        name='Image name',
+        imageBase64=driver.get_screenshot_as_base64(),
+        diffTollerancePercent=0,
+        os='Mac',
+        browser='Chrome',
+        viewport='800x600',
+        device='PC',
+    ))
+finally:
+    driver.quit()
+
