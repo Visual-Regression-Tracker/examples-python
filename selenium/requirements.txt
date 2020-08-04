@@ -1,0 +1,4 @@
+pytest
+selenium
+webdriver_manager
+visual_regression_tracker
