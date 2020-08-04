@@ -1,2 +1,2 @@
 # List of examples
-* [Selenium + SDK](https://github.com/Visual-Regression-Tracker/examples-js/blob/master/selenium/)
+* [Selenium + SDK](https://github.com/Visual-Regression-Tracker/examples-python/tree/master/selenium)
