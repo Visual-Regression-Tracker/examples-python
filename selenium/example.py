@@ -7,7 +7,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 config = Config(
     apiUrl='http://localhost:4200',
     project='Default project',
-    apiKey='M7X93CSR67MH76NNKCQ6KDQS18K8',
+    apiKey='9JEA4NS8YRMTTEHJVP16XTZ5S7AM',
     branchName='develop',
     enableSoftAssert=True
 )
