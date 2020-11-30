@@ -1,4 +1,4 @@
 pytest
 selenium
 webdriver_manager
-visual_regression_tracker > 4.0.0
+visual_regression_tracker >= 4.7.0
