@@ -3,16 +3,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from visual_regression_tracker import VisualRegressionTracker, Config, TestRun
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
-
-config = Config(
-    apiUrl='http://localhost:4200',
-    project='Default project',
-    apiKey='9JEA4NS8YRMTTEHJVP16XTZ5S7AM',
-    branchName='develop',
-    enableSoftAssert=True
-)
-
-vrt = VisualRegressionTracker(config)
+vrt = VisualRegressionTracker()
 
 with vrt:
     try:

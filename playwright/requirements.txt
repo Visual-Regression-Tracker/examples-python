@@ -1,2 +1,2 @@
 playwright
-visual_regression_tracker == 4.6.0
+visual_regression_tracker >= 4.6.0
