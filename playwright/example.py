@@ -4,24 +4,16 @@ from visual_regression_tracker import Config, IgnoreArea
 from visual_regression_tracker.playwright import PlaywrightVisualRegressionTracker, PageTrackOptions, \
     PageScreenshotOptions, Agent, ElementHandleScreenshotOptions, ElementHandleTrackOptions
 
-config = Config(
-    apiUrl='http://localhost:4200',
-    project='Default project',
-    apiKey='0TK0P0NQP6MNFQQPTYYBN27JRAA5',
-    branchName='develop',
-    enableSoftAssert=True,
-)
-
 playwright = sync_playwright().start()
 browserType = playwright.chromium
 browser = browserType.launch(headless=False)
 page = browser.newPage()
 page.goto('https://www.python.org/')
 
-vrt = PlaywrightVisualRegressionTracker(config, browserType)
+try:
+    vrt = PlaywrightVisualRegressionTracker(browserType, None)
 
-with vrt:
-    try:
+    with vrt:
         vrt.trackPage(page, 'Home page', PageTrackOptions(
             diffTollerancePercent=1.34,
             ignoreAreas=[
@@ -61,5 +53,6 @@ with vrt:
                 viewport='1200x12'
             )
         ))
-    finally:
-        playwright.stop()
+finally:
+    browser.close()
+    playwright.stop()
