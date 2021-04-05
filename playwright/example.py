@@ -34,7 +34,7 @@ try:
             )
         ))
 
-        vrt.trackElementHandle(page.querySelector(".search-the-site"), "Search form", ElementHandleTrackOptions(
+        vrt.trackElementHandle(page.query_selector(".search-the-site"), "Search form", ElementHandleTrackOptions(
             diffTollerancePercent=1.34,
             ignoreAreas=[
                 IgnoreArea(
