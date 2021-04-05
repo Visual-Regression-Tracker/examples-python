@@ -1,4 +1,4 @@
-from playwright import sync_playwright
+from playwright.sync_api import sync_playwright
 
 from visual_regression_tracker import Config, IgnoreArea
 from visual_regression_tracker.playwright import PlaywrightVisualRegressionTracker, PageTrackOptions, \
@@ -7,7 +7,7 @@ from visual_regression_tracker.playwright import PlaywrightVisualRegressionTrack
 playwright = sync_playwright().start()
 browserType = playwright.chromium
 browser = browserType.launch(headless=False)
-page = browser.newPage()
+page = browser.new_page()
 page.goto('https://www.python.org/')
 
 try:
@@ -25,8 +25,8 @@ try:
                 )
             ],
             screenshotOptions=PageScreenshotOptions(
-                fullPage=True,
-                omitBackground=True,
+                full_page=True,
+                omit_background=True,
             ),
             agent=Agent(
                 os='OS',
@@ -45,7 +45,7 @@ try:
                 )
             ],
             screenshotOptions=ElementHandleScreenshotOptions(
-                omitBackground=True,
+                omit_background=True,
             ),
             agent=Agent(
                 os='OS',

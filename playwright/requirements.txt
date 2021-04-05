@@ -1,2 +1,2 @@
-playwright
-visual_regression_tracker >= 4.7.0
+playwright >= 1.10
+visual_regression_tracker >= 4.8.0
