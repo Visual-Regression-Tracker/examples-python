@@ -36,7 +36,7 @@ jobs:
         run: docker compose up -d --quiet-pull
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.14"
+          python-version: "3.15"
           cache: pip
           cache-dependency-path: ${{ matrix.example }}/requirements.txt
       - run: pip install -r requirements.txt

@@ -1,9 +1,4 @@
-.coverage
-junit
-visual_regression_tracker.egg-info
-htmlcov
-coverage.xml
-build
-.idea
-dist
+__pycache__/
+.venv/
+.idea/
 vrt.json
