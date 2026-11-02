@@ -1,20 +1,27 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from visual_regression_tracker import VisualRegressionTracker, Config, TestRun
+from selenium.webdriver.common.by import By
+from visual_regression_tracker import VisualRegressionTracker, TestRun
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+options = webdriver.ChromeOptions()
+options.add_argument('--headless=new')
+options.add_argument('--window-size=1280,1024')
+driver = webdriver.Chrome(options=options)
 vrt = VisualRegressionTracker()
 
 with vrt:
     try:
-        driver.get("http://www.python.org")
+        driver.get('https://the-internet.herokuapp.com/')
         vrt.track(TestRun(
-            name='Image name',
+            name='Home page',
             imageBase64=driver.get_screenshot_as_base64(),
-            diffTollerancePercent=0,
-            os='Mac',
+        ))
+
+        driver.find_element(By.LINK_TEXT, 'Checkboxes').click()
+        vrt.track(TestRun(
+            name='Checkboxes page',
+            imageBase64=driver.get_screenshot_as_base64(),
             browser='Chrome',
-            viewport='800x600',
+            viewport='1280x1024',
             device='PC',
         ))
     finally:
