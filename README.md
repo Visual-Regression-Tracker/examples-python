@@ -1,6 +1,6 @@
 # Visual Regression Tracker examples for Python
 
-Each folder is a separate project with its own `requirements.txt`, `vrt.json.example` and README, on [sdk-python](https://github.com/Visual-Regression-Tracker/sdk-python) 5.0.0 from PyPI and Python 3.11 or later. The examples open https://the-internet.herokuapp.com headless and track screenshots in a [Visual Regression Tracker](https://github.com/Visual-Regression-Tracker/Visual-Regression-Tracker) 6.0 server.
+Each folder is a separate project with its own `requirements.txt`, `vrt.json.example` and README, on [sdk-python](https://github.com/Visual-Regression-Tracker/sdk-python) 5.0.0 from PyPI and Python 3.15 or later. The examples open https://the-internet.herokuapp.com headless and track screenshots in a [Visual Regression Tracker](https://github.com/Visual-Regression-Tracker/Visual-Regression-Tracker) 6.0 server.
 
 | Example                  | Stack                                        | Client                                                                                                      |
 | ------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
