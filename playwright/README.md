@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- Python 3.11 or later
+- Python 3.15 or later
 - A running [Visual Regression Tracker](https://github.com/Visual-Regression-Tracker/Visual-Regression-Tracker) 6.0 server and its API key
 
 ## Setup
