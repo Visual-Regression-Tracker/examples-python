@@ -1,2 +1,2 @@
-visual-regression-tracker[playwright]==5.1.0
+visual-regression-tracker[playwright]==6.0.0
 playwright==1.64.1

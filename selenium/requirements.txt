@@ -1,2 +1,2 @@
-visual-regression-tracker==5.1.0
+visual-regression-tracker==6.0.0
 selenium==4.52.0
